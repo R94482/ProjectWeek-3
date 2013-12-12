@@ -7,20 +7,18 @@ term: 1312
 
 //Global variables
 
-/*  
+
 
 var hop = 3
-   */ 
 var time = 8;
 var late;
-   /*
-var Drinks = ["Long Island", "Jack and Coke","Dirty Martini", "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
-  
-var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ];
+var Drinks = ["Long Island", "Jack and Coke","Dirty Martini",
+              "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
  
+var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ]; 
 var rounds = 5
-  
-
+var myPeeps = ("my friends")
+var feeling = ("Bad")
  
 
 
@@ -41,8 +39,8 @@ var Weekday = function(answer) {
     }
 };
 
-    */
-/*
+
+
 //function1 - includes array arugument, array propery, for loop, return
 
 var friendsDrinks = function(array1){
@@ -61,24 +59,11 @@ var friendsDrinks = function(array1){
 
 
 
-var nightOut = friendsDrinks(buddies)
 
-console.log ("We added " + nightOut + " drinks to our tab.") 
-    
-console.log("Kara's here!")
-buddies.push("Kara")
-Drinks.unshift("Jameson on the rocks")
-console.log("Order another round!")
-
-var nightContinues = friendsDrinks(buddies)
-
-console.log ("We added " + nightContinues + " more drinks to our tab.") 
-
- /*
 
 //Function 1
 
-*/
+
 var stayLateFunc = function(maybe, hour){
     
     while (maybe === true && (hour = hour + 2) < 16) {
@@ -90,7 +75,7 @@ var stayLateFunc = function(maybe, hour){
         //while loop 
     }
     
-    console.log("Oh wow! It's " + hour + " o'clock!")
+    console.log("Whoa! It's " + hour + " o'clock!")
     console.log("I should have quit while I was ahead!")
     
     var shock = (hour - time)
@@ -98,7 +83,7 @@ var stayLateFunc = function(maybe, hour){
     return(shock);
 };
       
- /*
+ 
  //retun array; conditional; nested conditional function3
  
  var party = function(bars){
@@ -135,13 +120,13 @@ var stayLateFunc = function(maybe, hour){
  
  
  
- whereToGo = party(hop)
+ //whereToGo = party(hop)
  
  
- console.log("We found our way to " + whereToGo + ".")
+ //console.log("We found our way to " + whereToGo + ".")
     
  
- var sleep = function(array2){
+ var DD = function(array2){
     
    for (var i = 0, j = array2.length; i < j; i++) {
    
@@ -162,15 +147,15 @@ var stayLateFunc = function(maybe, hour){
 }; //Ask about getting one return from nested loop per parent loop
 
 
-sleep(buddies)
-  */
+
+  
  
 //this is where my number function will go
 var sleep = function(insomnia){
     
    for (insomnia = late; insomnia > 2; insomnia = (insomnia - 1)) {
     
-        console.log("I can't fall asleep!");
+        console.log("I still can't fall asleep!");
         console.log("I only have " + insomnia + " hours to sleep!");
         
     
@@ -198,40 +183,62 @@ var sleep = function(insomnia){
 
 
 
-/*
+
 //This is where my string function will go
 
 var talk = function(string1, string2){
     
-    var hangover = ("I hope " + string1 + " and " + string2 + " are doing better than me.")
+    var outCome = ("I wonder if " + string1 + " are doing " + string2 + " today.")
     
-   return hangover;
+   return (outCome);
 } 
 
 
 //This is where my main code will go
 
-myPrompt = prompt("Is it a weekday or weekend?", "Type weekday or weekend" ); //my propt for procedure
 
+
+
+myPrompt = prompt("Is it a weekday or weekend?", "Type weekday or weekend" ); //my propt for procedure
 Weekday(myPrompt);//my procedure
 
- */
+ 
 night = confirm("Will you have a late night?"); //my confirm for boolean
 
-var partyTime = stayLateFunc(night, time); //my boolean function
 
+var nightOut = friendsDrinks(buddies)
+console.log ("We added " + nightOut + " drinks to our tab.") 
+console.log("Kara's here!")
+buddies.push("Kara")
+Drinks.unshift("Jameson on the rocks")
+console.log("Order another round!")
+
+
+var nightContinues = friendsDrinks(buddies)
+console.log ("We added " + nightContinues + " more drinks to our tab.") 
+
+
+whereToGo = party(hop)
+console.log("We found our way to " + whereToGo + ".")
+
+
+var partyTime = stayLateFunc(night, time); //my boolean function
 console.log("I can't believe I stayed out for " + partyTime + " hours!");
 
-console.log("It is " + sleep(time) + " that I'll have a hangover when I wake up.")
-/*
 
- */
-/*
+DD(buddies)
+
+
+
 var wideAwake =  sleep(time);
+console.log("It is " + wideAwake + " that I'll have a hangover when I wake up.")
+    //boolean return
+
+
+
 
 console.log(wideAwake);
 
 
-var nextDay = talk(friend1, friend2);
+var nextDay = talk(myPeeps, feeling);
 console.log(nextDay);
-*/
