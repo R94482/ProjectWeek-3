@@ -8,13 +8,17 @@ term: 1312
 //Global variables
 
   */
+
+var hop = 3
+var time = 7; 
+/*
 var Drinks = ["Long Island", "Jack and Coke","Dirty Martini", "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
 
 var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ];
  
 var rounds = 5
-  /* 
-var time = 7; 
+  
+
 
 
 
@@ -91,6 +95,48 @@ var stayLateFunc = function(maybe, hour){
 };
        */
  
+ var party = function(bars){
+    
+  if (bars<= 5) {
+    
+    var pubCrawl = ["Cabo Cantina", "Sharkey's", "The Rusty Mullet", "Pink Taco", "Lucky Devil",
+                  "Molly Malone's"]
+    
+    
+    if (pubCrawl.length === time) {
+        
+        console.log("We went to a new bar every hour!")
+       
+    }else{
+        
+        console.log("We went to " + pubCrawl.length + " different bars in one night!")
+    }
+  
+  }else{
+  
+   var pubCrawl = ["Some seedy bar", "a biker bar", "a goth bar"]
+ 
+    console.log("We were feeling adventurous!")
+    
+  }
+    return(pubCrawl)
+
+  
+    
+   
+    
+};
+ 
+ 
+ 
+ whereToGo = party(hop)
+ 
+ 
+ console.log("We found our way to " + whereToGo + ".")
+ 
+  /*
+ 
+ 
 //this is where my number function will go
 var sleep = function(insomnia){
     
@@ -107,7 +153,7 @@ var sleep = function(insomnia){
     return(speak + passOut);
     
 };
-      /*
+     
 //This is where my string function will go
 
 var talk = function(string1, string2){
