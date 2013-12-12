@@ -4,22 +4,24 @@ Project 3
 term: 1312
 */
 
-/*
+
 //Global variables
 
-  */
+/*  
 
 var hop = 3
-var time = 7; 
-/*
+   */ 
+var time = 8;
+var late;
+   /*
 var Drinks = ["Long Island", "Jack and Coke","Dirty Martini", "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
-
+  
 var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ];
  
 var rounds = 5
   
 
-
+ 
 
 
 
@@ -42,6 +44,7 @@ var Weekday = function(answer) {
     */
 /*
 //function1 - includes array arugument, array propery, for loop, return
+
 var friendsDrinks = function(array1){
     
     for (var i = 0, j = array1.length; i < j; i++){
@@ -75,10 +78,10 @@ console.log ("We added " + nightContinues + " more drinks to our tab.")
 
 //Function 1
 
-
+*/
 var stayLateFunc = function(maybe, hour){
     
-    while (maybe === true && (hour = hour + 2) <= 16) {
+    while (maybe === true && (hour = hour + 2) < 16) {
         
         console.log("It's " + hour + " o'clock!")
         console.log("I think I can stay a bit longer.")
@@ -91,9 +94,12 @@ var stayLateFunc = function(maybe, hour){
     console.log("I should have quit while I was ahead!")
     
     var shock = (hour - time)
+    late = (20 - hour)
     return(shock);
 };
-       */
+      
+ /*
+ //retun array; conditional; nested conditional function3
  
  var party = function(bars){
     
@@ -133,27 +139,66 @@ var stayLateFunc = function(maybe, hour){
  
  
  console.log("We found our way to " + whereToGo + ".")
+    
  
-  /*
- 
+ var sleep = function(array2){
+    
+   for (var i = 0, j = array2.length; i < j; i++) {
+   
+        console.log(array2[i] + " called a taxi to go home.");
+        
+        for (a = array2.length; a > 0; a--){
+            
+          console.log((array2.length+1-a) + " down, " + (a-1) + " to go.");
+            
+            //code
+        }
+        
+        
+    }
+    console.log("It's been a long night.");
+    console.log("I hope I don't sleep in tomorrow!");
+    
+}; //Ask about getting one return from nested loop per parent loop
+
+
+sleep(buddies)
+  */
  
 //this is where my number function will go
 var sleep = function(insomnia){
     
-   for (insomnia = time; insomnia > 1; insomnia = insomnia - 3) {
+   for (insomnia = late; insomnia > 2; insomnia = (insomnia - 1)) {
+    
+        console.log("I can't fall asleep!");
+        console.log("I only have " + insomnia + " hours to sleep!");
+        
+    
+        if (insomnia < 2) {
+        
+            var hangover = true
+            //code
+        } else {
+        
+        var hangover = false
+    }
    
-        //console.log("I can't fall asleep!");
-        //console.log("I only have " + insomnia + " hours to sleep!");
-        var speak = ("I can't fall asleep! I only have " + insomnia + " hours until my alarm!");
-        //this is my for loop
+        
+       
+       
     }
     
-    var passOut = (" One sheep... two sheep... ZZZZZZzzzzz...");
-    
-    return(speak + passOut);
+    console.log("I can't fall uh... ZZZZZzzzzz")
+   return(hangover)
     
 };
-     
+   
+
+
+
+
+
+/*
 //This is where my string function will go
 
 var talk = function(string1, string2){
@@ -170,12 +215,16 @@ myPrompt = prompt("Is it a weekday or weekend?", "Type weekday or weekend" ); //
 
 Weekday(myPrompt);//my procedure
 
-
+ */
 night = confirm("Will you have a late night?"); //my confirm for boolean
 
 var partyTime = stayLateFunc(night, time); //my boolean function
 
 console.log("I can't believe I stayed out for " + partyTime + " hours!");
+
+console.log("It is " + sleep(time) + " that I'll have a hangover when I wake up.")
+/*
+
  */
 /*
 var wideAwake =  sleep(time);
