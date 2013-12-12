@@ -9,16 +9,24 @@ term: 1312
 
 
 
-var hop = 3
+var hop = 3;
 var time = 8;
 var late;
 var Drinks = ["Long Island", "Jack and Coke","Dirty Martini",
               "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
  
-var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ]; 
-var rounds = 5
-var myPeeps = ("my friends")
-var feeling = ("Bad")
+var json = {
+    "buddies": [
+                {"name": "Michelle"},
+                {"name": "I"},
+                {"name": "Scotty"},
+                {"name": "Marty"},
+                {"name": "Mike" }
+               ]
+};
+var rounds = 5;
+var myPeeps = ("my friends");
+var feeling = ("Bad");
  
 
 
@@ -46,7 +54,8 @@ var Weekday = function(answer) {
 var friendsDrinks = function(array1){
     
     for (var i = 0, j = array1.length; i < j; i++){
-        console.log (array1[i] + " had a " + Drinks[i] + ".")
+        var data = array1[i]
+        console.log ( data.name + " had a " + Drinks[i] + ".")
         
        
     
@@ -129,8 +138,10 @@ var stayLateFunc = function(maybe, hour){
  var DD = function(array2){
     
    for (var i = 0, j = array2.length; i < j; i++) {
+        
+        var data = array2[i]
    
-        console.log(array2[i] + " called a taxi to go home.");
+        console.log(data.name + " called a taxi to go home.");
         
         for (a = array2.length; a > 0; a--){
             
@@ -206,15 +217,15 @@ Weekday(myPrompt);//my procedure
 night = confirm("Will you have a late night?"); //my confirm for boolean
 
 
-var nightOut = friendsDrinks(buddies)
-console.log ("We added " + nightOut + " drinks to our tab.") 
-console.log("Kara's here!")
-buddies.push("Kara")
+var nightOut = friendsDrinks(json.buddies);
+console.log ("We added " + nightOut + " drinks to our tab.");
+console.log("Kara's here!");
+json.buddies.push({"name": "Kara"});
 Drinks.unshift("Jameson on the rocks")
 console.log("Order another round!")
 
 
-var nightContinues = friendsDrinks(buddies)
+var nightContinues = friendsDrinks(json.buddies)
 console.log ("We added " + nightContinues + " more drinks to our tab.") 
 
 
@@ -226,18 +237,15 @@ var partyTime = stayLateFunc(night, time); //my boolean function
 console.log("I can't believe I stayed out for " + partyTime + " hours!");
 
 
-DD(buddies)
+DD(json.buddies);
 
 
 
 var wideAwake =  sleep(time);
-console.log("It is " + wideAwake + " that I'll have a hangover when I wake up.")
+console.log("It is " + wideAwake + " that I'll have a hangover when I wake up.");
     //boolean return
 
 
-
-
-console.log(wideAwake);
 
 
 var nextDay = talk(myPeeps, feeling);
