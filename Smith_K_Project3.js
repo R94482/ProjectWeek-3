@@ -6,9 +6,6 @@ term: 1312
 
 
 //Global variables
-
-
-
 var hop = 3;
 var time = 8;
 var late;
@@ -33,7 +30,7 @@ var feeling = ("Bad");
 
 
 
-//This is where my procedure will go
+//This is where procedure 1 will go. Included: confirm, boolean logic
 var Weekday = function(answer) {
     
     if (answer   === "weekend" || answer === "Weekend") {
@@ -49,8 +46,8 @@ var Weekday = function(answer) {
 
 
 
-//function1 - includes array arugument, array propery, for loop, return
 
+//function1 - includes array arugument, array propery, for loop, return number
 var friendsDrinks = function(array1){
     
     for (var i = 0, j = array1.length; i < j; i++){
@@ -69,10 +66,8 @@ var friendsDrinks = function(array1){
 
 
 
-
-//Function 1
-
-
+//Function2 - includes: boolean argument, number argument, while loop, boolean logic
+//number return, global variable, math
 var stayLateFunc = function(maybe, hour){
     
     while (maybe === true && (hour = hour + 2) < 16) {
@@ -92,9 +87,10 @@ var stayLateFunc = function(maybe, hour){
     return(shock);
 };
       
+
  
- //retun array; conditional; nested conditional function3
  
+ //Function3 - includes: retun array; conditional; nested conditional
  var party = function(bars){
     
   if (bars<= 5) {
@@ -127,14 +123,10 @@ var stayLateFunc = function(maybe, hour){
     
 };
  
+
+
  
- 
- //whereToGo = party(hop)
- 
- 
- //console.log("We found our way to " + whereToGo + ".")
-    
- 
+ //Procedure2 - includes: json data, nested loop (has error)  
  var DD = function(array2){
     
    for (var i = 0, j = array2.length; i < j; i++) {
@@ -143,7 +135,10 @@ var stayLateFunc = function(maybe, hour){
    
         console.log(data.name + " called a taxi to go home.");
         
-        for (a = array2.length; a > 0; a--){
+        while (i < (i = i +1)) {
+            //code
+        
+        //for (a = array2.length; a > 0; a--)
             
           console.log((array2.length+1-a) + " down, " + (a-1) + " to go.");
             
@@ -157,11 +152,10 @@ var stayLateFunc = function(maybe, hour){
     
 }; //Ask about getting one return from nested loop per parent loop
 
-
-
+  
   
  
-//this is where my number function will go
+//Function4 - includes: for loop, boolean return
 var sleep = function(insomnia){
     
    for (insomnia = late; insomnia > 2; insomnia = (insomnia - 1)) {
@@ -195,8 +189,7 @@ var sleep = function(insomnia){
 
 
 
-//This is where my string function will go
-
+//Function5 - includes: string return
 var talk = function(string1, string2){
     
     var outCome = ("I wonder if " + string1 + " are doing " + string2 + " today.")
@@ -205,48 +198,52 @@ var talk = function(string1, string2){
 } 
 
 
-//This is where my main code will go
 
 
 
+//Main code - includes: start, finish, returned values, output
 
+//prompt1
 myPrompt = prompt("Is it a weekday or weekend?", "Type weekday or weekend" ); //my propt for procedure
-Weekday(myPrompt);//my procedure
+Weekday(myPrompt);//procedure1
 
- 
+
+ //boolean argument
 night = confirm("Will you have a late night?"); //my confirm for boolean
 
 
+//json data/array argument
 var nightOut = friendsDrinks(json.buddies);
-console.log ("We added " + nightOut + " drinks to our tab.");
+console.log ("We added " + nightOut + " drinks to our tab."); //return number
 console.log("Kara's here!");
-json.buddies.push({"name": "Kara"});
-Drinks.unshift("Jameson on the rocks")
-console.log("Order another round!")
+json.buddies.push({"name": "Kara"}); //array method
+Drinks.unshift("Jameson on the rocks"); //array method
+console.log("Order another round!");
 
 
-var nightContinues = friendsDrinks(json.buddies)
-console.log ("We added " + nightContinues + " more drinks to our tab.") 
+//json data/array argument
+var nightContinues = friendsDrinks(json.buddies);
+console.log ("We added " + nightContinues + " more drinks to our tab.") ; //return number
 
 
-whereToGo = party(hop)
-console.log("We found our way to " + whereToGo + ".")
+//number argument
+var whereToGo = party(hop)
+console.log("We found our way to " + whereToGo + "."); //return array
 
 
+//boolean argument/number argument
 var partyTime = stayLateFunc(night, time); //my boolean function
-console.log("I can't believe I stayed out for " + partyTime + " hours!");
+console.log("I can't believe I stayed out for " + partyTime + " hours!"); //return number
 
 
-DD(json.buddies);
-
+DD(json.buddies); //procedure2
 
 
 var wideAwake =  sleep(time);
 console.log("It is " + wideAwake + " that I'll have a hangover when I wake up.");
-    //boolean return
+    //return boolean
 
 
-
-
+//string arguments
 var nextDay = talk(myPeeps, feeling);
-console.log(nextDay);
+console.log(nextDay); //return string
