@@ -4,19 +4,22 @@ Project 3
 term: 1312
 */
 
-
+/*
 //Global variables
-var function(1);
-var function(2);
-var function(3);
-var Drinks["Long Island", "Jack and Coke", "Flaming Margarita", "Glass of Wine", "Whiskey Sour"]
-var Friends["Michelle", "Scotty", "Marty", "Mike"]
- 
- //Global variables
 
-var time = 7;
+  */
+var Drinks = ["Long Island", "Jack and Coke","Dirty Martini", "Flaming Margarita", "Glass of Wine", "Whiskey Sour"];
 
+var buddies = [ "Michelle", "I","Scotty", "Marty", "Mike" ];
  
+var rounds = 5
+  /* 
+var time = 7; 
+
+
+
+
+
 
 //This is where my procedure will go
 var Weekday = function(answer) {
@@ -32,6 +35,40 @@ var Weekday = function(answer) {
     }
 };
 
+    */
+/*
+//function1 - includes array arugument, array propery, for loop, return
+var friendsDrinks = function(array1){
+    
+    for (var i = 0, j = array1.length; i < j; i++){
+        console.log (array1[i] + " had a " + Drinks[i] + ".")
+        
+       
+    
+    };
+    
+    var tab = (array1.length);
+    return tab
+    
+}
+
+
+
+var nightOut = friendsDrinks(buddies)
+
+console.log ("We added " + nightOut + " drinks to our tab.") 
+    
+console.log("Kara's here!")
+buddies.push("Kara")
+Drinks.unshift("Jameson on the rocks")
+console.log("Order another round!")
+
+var nightContinues = friendsDrinks(buddies)
+
+console.log ("We added " + nightContinues + " more drinks to our tab.") 
+
+ /*
+
 //Function 1
 
 
@@ -46,14 +83,14 @@ var stayLateFunc = function(maybe, hour){
         //while loop 
     }
     
-    console.log("I can't believe it's " + hour + " o'clock!")
+    console.log("Oh wow! It's " + hour + " o'clock!")
     console.log("I should have quit while I was ahead!")
     
     var shock = (hour - time)
     return(shock);
 };
-
-
+       */
+ 
 //this is where my number function will go
 var sleep = function(insomnia){
     
@@ -70,7 +107,7 @@ var sleep = function(insomnia){
     return(speak + passOut);
     
 };
-
+      /*
 //This is where my string function will go
 
 var talk = function(string1, string2){
@@ -92,9 +129,9 @@ night = confirm("Will you have a late night?"); //my confirm for boolean
 
 var partyTime = stayLateFunc(night, time); //my boolean function
 
-console.log(partyTime);
-
-
+console.log("I can't believe I stayed out for " + partyTime + " hours!");
+ */
+/*
 var wideAwake =  sleep(time);
 
 console.log(wideAwake);
@@ -102,3 +139,4 @@ console.log(wideAwake);
 
 var nextDay = talk(friend1, friend2);
 console.log(nextDay);
+*/
