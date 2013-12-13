@@ -24,7 +24,7 @@ var json = {
 var rounds = 5;
 var myPeeps = ("my friends");
 var feeling = ("Bad");
- 
+
 
 
 
@@ -62,7 +62,6 @@ var friendsDrinks = function(array1){
     return tab
     
 }
-
 
 
 
@@ -125,30 +124,40 @@ var stayLateFunc = function(maybe, hour){
  
 
 
- 
+                 
  //Procedure2 - includes: json data, nested loop (has error)  
  var DD = function(array2){
     
-   for (var i = 0, j = array2.length; i < j; i++) {
+   
+   for (var i = 0, j = array2.length, math = 1; i < j; math ++) {
         
-        var data = array2[i]
+        var data = array2[i];
    
         console.log(data.name + " called a taxi to go home.");
+        console.log((i+1) + " down, " + (j - math) + " to go.");
         
-        while (i < (i = i +1)) {
-            //code
-        
-        //for (a = array2.length; a > 0; a--)
+        if ((i % 2) > 0) {
             
-          console.log((array2.length+1-a) + " down, " + (a-1) + " to go.");
+            i++;
+          
+        }else{
+        
+          while ( i % 2 <= 0 ) {
             
-            //code
-        }
+            console.log (data.name + " has a long way to go home.");
+            
+            i++;
+            
+             };
+            
+        };
         
         
-    }
+    };
+    
+    console.log("I can't wait to fall in my bed!");
     console.log("It's been a long night.");
-    console.log("I hope I don't sleep in tomorrow!");
+    console.log("I hope I don't over-sleep tomorrow!");
     
 }; //Ask about getting one return from nested loop per parent loop
 
@@ -171,21 +180,18 @@ var sleep = function(insomnia){
         } else {
         
         var hangover = false
-    }
+    };
    
         
        
        
-    }
+    };
     
-    console.log("I can't fall uh... ZZZZZzzzzz")
-   return(hangover)
+    console.log("I can't fall uh... ZZZZZzzzzz...ZZZZZZzzzz...");
+    return(hangover);
     
 };
    
-
-
-
 
 
 
